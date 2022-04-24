@@ -1,0 +1,20 @@
+version: "3"
+services:
+  card-deck-rest-api:
+    container_name: card-deck-rest-api
+    restart: always
+    build:
+      context: .
+    ports:
+      - "3210:3210"
+    command: node dist/app.js
+    links:
+      - card-deck-rest-api-mongo
+  card-deck-rest-api-mongo:
+    container_name: card-deck-rest-api-mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    hostname: mongodb-local
+    ports:
+      - '27017:27017'

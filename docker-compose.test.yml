@@ -1,0 +1,9 @@
+version: "3"
+services:
+  card-deck-rest-api:
+    restart: 'no'
+  tests:
+      container_name: tests
+      build:
+        context: .
+      command: bash -c "./wait-for card-deck-rest-api:3210 -- npm run test"
