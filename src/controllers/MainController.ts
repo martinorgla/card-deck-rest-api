@@ -62,7 +62,7 @@ class MainController {
 
             response.status(200).send(cardDeck);
         } catch (error) {
-            response.status(400).send({error: error.message});
+            response.status(404).send({error: error.message});
         }
     };
 
