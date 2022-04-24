@@ -31,11 +31,11 @@ export class CardDeckService {
         this.type = type.toUpperCase();
         this.isShuffled = isShuffled;
 
-        if (this.type === 'FULL') {
+        if (this.type === DeckType.full) {
             this.deckService = new FullDeckService();
         }
 
-        if (this.type === 'SHORT') {
+        if (this.type === DeckType.short) {
             this.deckService = new ShortDeckService();
         }
     }
