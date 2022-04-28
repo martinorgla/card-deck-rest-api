@@ -1,4 +1,4 @@
-enum DeckType {
+export enum DeckType {
     full = "FULL",
     short = "SHORT",
 }

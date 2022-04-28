@@ -5,6 +5,7 @@ import {ShortDeckService} from "../decks/providers/shortDeck.service";
 import {ICardDeck} from "../interfaces/ICardDeck";
 import {collections} from "./database.service";
 import {v4 as uuidV4} from 'uuid';
+import {DeckType} from "../enums/deckType";
 
 export class CardDeckService {
     private deckService: Deck;
